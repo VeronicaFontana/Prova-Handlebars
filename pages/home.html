@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="pizze.js"></script>
+
     <title>Home</title>
 </head>
 <body>
     
-    QUESTA è HOMEPAGE
+    <section class="container py-3">
+        <div class="text-center fs-2">
+            <p class="">Le nostre migliori pizze!</p>
+        </div>
+        <div class="row" id="card-row">
+
+            <script id="pizza-card" type="text/x-handlebars-template">
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{nome}}</h5>
+                            <p class="card-text">{{ingredienti}}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{prezzo}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </script>
+
+        </div>
+    </section>
 
 </body>
 </html>

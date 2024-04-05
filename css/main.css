@@ -35,17 +35,17 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
-.footer .social-icons i {
+.footer .social-box .social-icons i {
   margin: 0 10px;
 }
-.footer .social-icons i:hover {
+.footer .social-box .social-icons i:hover {
   color: beige;
   text-shadow: 2px 2px black;
   cursor: pointer;
 }
 
 #content {
-  height: calc(100vh - 197px);
+  min-height: calc(100vh - 257px);
 }
 
 body {
