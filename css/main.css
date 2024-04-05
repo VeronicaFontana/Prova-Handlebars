@@ -1,26 +1,51 @@
-.row {
+.header {
   display: flex;
   align-items: center;
   padding: 0 20px;
   height: 90px;
   background-color: rgb(255, 0, 0);
 }
-.row .col-5 h1 {
+.header .col-5 h1 {
   color: white;
 }
-.row .col-7 ul {
+.header .col-7 ul {
   list-style: none;
   display: flex;
   justify-content: end;
   margin: 0;
 }
-.row .col-7 ul li {
+.header .col-7 ul li {
   margin: 0 10px;
 }
-.row .col-7 ul li a {
+.header .col-7 ul li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+.header .col-7 ul li a:hover {
+  color: beige;
+  text-shadow: 2px 2px black;
+}
+
+.footer {
+  height: 150px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.footer .social-icons i {
+  margin: 0 10px;
+}
+.footer .social-icons i:hover {
+  color: beige;
+  text-shadow: 2px 2px black;
+  cursor: pointer;
+}
+
+#content {
+  height: calc(100vh - 197px);
 }
 
 body {

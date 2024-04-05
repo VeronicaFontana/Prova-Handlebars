@@ -1,0 +1,21 @@
+.footer{
+    height: 150px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+
+    .social-icons{
+        i{
+            margin: 0 10px;
+
+            &:hover{
+                color: beige;
+                text-shadow: 2px 2px black;
+                cursor: pointer;
+            }
+        }
+    }
+}
