@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <script src="pizze.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../pizze.js"></script>
+    
     <title>Home</title>
 </head>
 <body>
@@ -16,19 +17,22 @@
             <p class="">Le nostre migliori pizze!</p>
         </div>
         <div class="row" id="card-row">
-
+            
             <script id="pizza-card" type="text/x-handlebars-template">
+                {{#each}}
                 <div class="col-4">
                     <div class="card" style="width: 18rem;">
+                        <img src="../img/{{immagine}}" class="card-img-top" alt="{{nome}}">
                         <div class="card-body">
                             <h5 class="card-title">{{nome}}</h5>
-                            <p class="card-text">{{ingredienti}}</p>
+                            <p class="card-text">Ingredienti: {{ingredienti}}</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{prezzo}}</li>
+                            <li class="list-group-item">Prezzo: {{prezzo}}&euro;</li>
                         </ul>
                     </div>
                 </div>
+                {{/each}}
             </script>
 
         </div>

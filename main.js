@@ -34,10 +34,10 @@ function loadPage(pageName) {
 }
 
 
-
-
 loadTemplate('header', '#header');
 loadTemplate('footer', '#footer');
+
+
 
 
 
