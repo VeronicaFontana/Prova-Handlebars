@@ -1,13 +1,26 @@
-.header-section {
+.row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
   height: 90px;
-  width: 100vw;
   background-color: rgb(255, 0, 0);
 }
-.header-section h1 {
+.row .col-5 h1 {
   color: white;
+}
+.row .col-7 ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  margin: 0;
+}
+.row .col-7 ul li {
+  margin: 0 10px;
+}
+.row .col-7 ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 body {
