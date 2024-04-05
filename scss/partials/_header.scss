@@ -1,4 +1,7 @@
-section{
+.header-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 90px;
     width: 100vw;
     background-color: rgb(255, 0, 0);

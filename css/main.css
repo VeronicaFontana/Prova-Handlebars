@@ -1,10 +1,19 @@
-section {
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 90px;
   width: 100vw;
   background-color: rgb(255, 0, 0);
 }
-section h1 {
+.header-section h1 {
   color: white;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=main.css.map */
