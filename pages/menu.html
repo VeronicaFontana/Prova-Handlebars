@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/pizze.js"></script>
+    <script src="../js/dolci.js"></script>
+    <script src="../js/beverage.js"></script>
     <title>Menu</title>
 </head>
 <body>
@@ -61,7 +63,11 @@
                         </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                        <div class="accordion-body">
+                            <ul id="dolci-list">
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-item">
@@ -71,7 +77,11 @@
                         </button>
                     </h2>
                     <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                        <div class="accordion-body"> 
+                            <ul id="beverage-list">
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,21 +93,61 @@
 
     
     <script>
-        if (typeof pizze !== "undefined") {
-            pizze.forEach(function(pizza) {
-                var listItem = document.createElement("li");
+        if(typeof pizze !== "undefined"){
+            const listaPizze = document.getElementById("pizze-list");
+            pizze.forEach(function(pizza){
+                const listItem = document.createElement("li");
 
-                var img = document.createElement("img");
+                const img = document.createElement("img");
                 img.src = pizza.immagine;
                 img.alt = pizza.nome;
                 listItem.appendChild(img);
 
-                var info = document.createElement("p");
+                const info = document.createElement("p");
                 info.textContent = pizza.nome + " - Ingredienti: " + pizza.ingredienti.join(", ");
                 listItem.appendChild(info);
 
-                var prezzo = document.createElement("p");
+                const prezzo = document.createElement("p");
                 prezzo.textContent = "Prezzo: " + pizza.prezzo + "€";
+                listItem.appendChild(prezzo);
+
+                listaPizze.appendChild(listItem);
+        });
+        }else{
+            console.error("L'array non è definito");
+        }
+
+
+        if(typeof dolci !== "undefined"){
+            const listaDolci = document.getElementById("dolci-list");
+            pizze.forEach(function(dolce){
+                const listItem = document.createElement("li");
+
+                const info = document.createElement("p");
+                info.textContent = dolce.nome;
+                listItem.appendChild(info);
+
+                const prezzo = document.createElement("p");
+                prezzo.textContent = "Prezzo: " + dolce.prezzo + "€";
+                listItem.appendChild(prezzo);
+
+                listaPizze.appendChild(listItem);
+        });
+        }else{
+            console.error("L'array non è definito");
+        }
+
+        if(typeof beverage !== "undefined"){
+            const listaBibite = document.getElementById("beverage-list");
+            bibite.forEach(function(bibita){
+                const listItem = document.createElement("li");
+
+                const info = document.createElement("p");
+                info.textContent = bibita.nome;
+                listItem.appendChild(info);
+
+                const prezzo = document.createElement("p");
+                prezzo.textContent = "Prezzo: " + bibita.prezzo + "€";
                 listItem.appendChild(prezzo);
 
                 listaPizze.appendChild(listItem);
