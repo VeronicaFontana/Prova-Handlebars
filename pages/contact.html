@@ -7,7 +7,41 @@
 </head>
 <body>
 
-    QUESTO è CONTATTI
+    <section class="menu-contacts-bg">
+        <div id="menu-info-box" class="container text-center py-3">
+            <h1 class="text-white">Pizzeria "Da Zio Tonino"</h1>
+            <div id="info">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Via dei Mille, 12</span>
+                    <span>43126, Parma</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>0521 3536373</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <span>pizzeria.ziotonino@example.com</span>
+                </div>
+            </div>
+            <div id="map">
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.0.0/maps/maps-web.min.js"></script>
+    <script>
+        tt.setProductInfo("pizzeria");
+        const map = tt.map({
+            key: "K3k0yOkyU7WALeqebCABeIkAJp9nGGmo",
+            container: "map"
+        });
+
+        const marker = new tt.Marker().setLngLat([44.79684014418603, 10.316403803312625]).addTo(map);
+    </script>
     
 </body>
 </html>
