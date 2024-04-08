@@ -37,8 +37,3 @@ const pizze = [
     }
 ];
 
-const source = document.getElementById('pizza-card').innerHTML;
-const template = Handlebars.compile(source);
-const compiledHtml = template(pizze);
-const pizzeText = document.getElementById('card-row');
-pizzeText.innerHTML = compiledHtml;

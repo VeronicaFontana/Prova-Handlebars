@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/pizze.js"></script>
+    <title>Menu</title>
+</head>
+<body>
+    
+    <section class="menu-contacts-bg">
+        <div id="menu-box" class="container text-center">
+            <h1 class="text-white">Il nostro menu</h1>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Finger Food
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <span><b>Patatine fritte:</b></span>
+                                    <span>Porzione piccola 3&euro; - </span>
+                                    <span>Porzione media 4&euro;</span>
+                                </li>
+                                <li>
+                                    <span><b>Nuggets di pollo:</b></span>
+                                    <span>Porzione 4 pezzi 2.50&euro; - </span>
+                                    <span>Porzione 6 pezzi 3.50&euro;</span>
+                                </li>
+                                <li>
+                                    <span><b>Alette piccanti:</b></span>
+                                    <span>Porzione 4 pezzi 3&euro; - </span>
+                                    <span>Porzione 6 pezzi 4&euro;</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Pizze
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <ul id="pizze-list">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Dolci
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Bevande
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    
+    <script>
+        if (typeof pizze !== "undefined") {
+            pizze.forEach(function(pizza) {
+                var listItem = document.createElement("li");
+
+                var img = document.createElement("img");
+                img.src = pizza.immagine;
+                img.alt = pizza.nome;
+                listItem.appendChild(img);
+
+                var info = document.createElement("p");
+                info.textContent = pizza.nome + " - Ingredienti: " + pizza.ingredienti.join(", ");
+                listItem.appendChild(info);
+
+                var prezzo = document.createElement("p");
+                prezzo.textContent = "Prezzo: " + pizza.prezzo + "€";
+                listItem.appendChild(prezzo);
+
+                listaPizze.appendChild(listItem);
+        });
+        }else{
+            console.error("L'array non è definito");
+        }
+    </script>
+
+</body>
+</html>

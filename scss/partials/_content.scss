@@ -23,3 +23,18 @@
         box-shadow: 0 0 10px grey;
     }
 }
+
+
+
+//Menu
+.menu-contacts-bg{
+    background-image: url("../../img/background.jpg");
+    height: 100vh;
+    padding-top: 160px;
+
+    #menu-box{
+        max-width: 900px;
+        background-color: rgba(199, 199, 199, 0.541);
+        border-radius: 1rem;
+    }
+}
