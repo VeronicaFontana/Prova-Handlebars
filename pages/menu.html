@@ -112,7 +112,7 @@
                 listItem.appendChild(prezzo);
 
                 listaPizze.appendChild(listItem);
-        });
+            });
         }else{
             console.error("L'array non è definito");
         }
@@ -120,7 +120,7 @@
 
         if(typeof dolci !== "undefined"){
             const listaDolci = document.getElementById("dolci-list");
-            pizze.forEach(function(dolce){
+            dolci.forEach(function(dolce){
                 const listItem = document.createElement("li");
 
                 const info = document.createElement("p");
@@ -132,7 +132,7 @@
                 listItem.appendChild(prezzo);
 
                 listaPizze.appendChild(listItem);
-        });
+            });
         }else{
             console.error("L'array non è definito");
         }
@@ -151,7 +151,7 @@
                 listItem.appendChild(prezzo);
 
                 listaPizze.appendChild(listItem);
-        });
+            });
         }else{
             console.error("L'array non è definito");
         }
