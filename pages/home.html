@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/pizze.js"></script>
     
     <title>Home</title>
 </head>
@@ -53,29 +49,33 @@
         </div>
     </section>
     
-    <section class="container py-3 content-section">
-        <div class="text-center fs-2">
-            <h1 class="text-white section-title">Le nostre migliori pizze!</h1>
-        </div>
-        <div class="row" id="card-row">
-            
-            <script id="pizza-card" type="text/x-handlebars-template">
-                {{#each}}
-                <div class="col-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../img/{{immagine}}" class="card-img-top" alt="{{nome}}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{nome}}</h5>
-                            <p class="card-text">Ingredienti: {{ingredienti}}</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Prezzo: {{prezzo}}&euro;</li>
-                        </ul>
-                    </div>
+    <section id="home-content-section" class="container my-3 py-3 d-flex justify-content-evenly">
+        <div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Piatti unici</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Carne, pesce, vegetariani</h6>
+                    <p class="card-text">Prelibatezze create da noi con ingredienti del territorio, per soddisfare ogni palato!</p>
                 </div>
-                {{/each}}
-            </script>
-
+            </div>
+        </div>
+        <div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Consegna a domicilio</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">0521 3536373</h6>
+                    <p class="card-text">Consegnamo direttamente a casa vostra ogni nostro piatti, assicurandoci che arrivi ben caldo e in perfetto orario!</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Eventi</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">pizzeria.ziotonino@example.com</h6>
+                    <p class="card-text">La nostra sala può ospitare fino a 150 persone e si può affittare per eventi privati come compleanni, matrimonio o cene aziendali!</p>
+                </div>
+            </div>
         </div>
     </section>
 

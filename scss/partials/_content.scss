@@ -15,12 +15,11 @@
 }
 
 
+#home-content-section{
+    text-align: center;
 
-.content-section{
-    background-color: rgba(143, 142, 142, 0.575);
-    border-radius: 2rem;
-
-    .section-title{
-        font-size: 2.4rem;
+    .card{
+        min-height: 200px;
+        box-shadow: 0 0 10px grey;
     }
 }
