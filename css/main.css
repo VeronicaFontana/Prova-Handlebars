@@ -51,8 +51,15 @@
 }
 
 #content {
-  min-height: calc(100vh - 257px);
-  background-image: url("../../img/background.jpg");
+  min-height: 100vh;
+}
+
+#home-slider .carousel-item {
+  max-height: 500px;
+}
+#home-slider .carousel-item .carousel-caption {
+  background-color: rgba(163, 163, 163, 0.603);
+  border-radius: 1.7rem;
 }
 
 .content-section {
