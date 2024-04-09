@@ -47,6 +47,12 @@ function loadPage(pageName) {
 loadTemplate("header", "#header");
 loadTemplate("footer", "#footer");
 
+
+
+
+
+//Menu
+
 const pizze = [
   {
     nome: "Margherita",
@@ -150,14 +156,13 @@ const dolci = [
 ];
 
 function prova() {
-  if (stato) {
     const pizzeList = document.getElementById("pizze-list");
     const dolciList = document.getElementById("dolci-list");
     const beverageList = document.getElementById("beverage-list");
 
     console.log(pizzeList);
 
-    if (pizzeList) {
+    if(pizzeList){
       console.log("è entrato");
       pizze.forEach(function (pizza) {
         console.log("ciclo");
@@ -176,7 +181,7 @@ function prova() {
       console.log("non è entrato");
     }
 
-    if (dolciList) {
+    if(dolciList){
       dolci.forEach(function (dolce) {
         const listItem = document.createElement("li");
         const templateSource =
@@ -188,7 +193,7 @@ function prova() {
       });
     }
 
-    if (beverageList) {
+    if(beverageList){
       bibite.forEach(function (bevanda) {
         const listItem = document.createElement("li");
         const templateSource =
@@ -200,4 +205,3 @@ function prova() {
       });
     }
   }
-}
