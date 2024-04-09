@@ -3,49 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.0.0/maps/maps.css"/>
     <title>Contact</title>
 </head>
 <body>
 
     <section class="menu-contacts-bg">
         <div id="menu-info-box" class="container text-center py-3">
-            <h1 class="text-white">Pizzeria "Da Zio Tonino"</h1>
-            <div id="info">
+            <div id="info" class="text-white">
+                <h1>Informazioni e contatti</h1>
                 <div>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Via dei Mille, 12</span>
-                    <span>43126, Parma</span>
+                    <h2>Orario di servizio</h2>
+                    <ul>
+                        <li>Lunedì: chiuso</li>
+                        <li>Martedì: 12-15 , 19-23</li>
+                        <li>Mercoledì: 12-15 , 19-23</li>
+                        <li>Giovedì: 12-15 , 19-23</li>
+                        <li>Venerdì: 12-15 , 19-23</li>
+                        <li>Sabato: 12-15 , 19-23.30</li>
+                        <li>Domenica: 12-15 , 19-23.30</li>
+                    </ul>
                 </div>
                 <div>
-                    <i class="fa-solid fa-phone"></i>
-                    <span>0521 3536373</span>
+                    <h2>Contatti</h2>
+                    <div>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0521 3536373</span><br>
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                        <span>pizzeria.ziotonino@example.com</span>
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-solid fa-envelope-open-text"></i>
-                    <span>pizzeria.ziotonino@example.com</span>
+                <div class="mt-3">
+                    <h2>Ci trovi qua</h2>
+                    <div>
+                        <i class="fa-solid fa-location-dot text-danger fs-2"></i>
+                        <span>Via dei Mille, 12 - 43126, Parma</span>
+                    </div>
                 </div>
-            </div>
-            <div id="map" class="map">
-
             </div>
         </div>
     </section>
 
-
-    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.0.0/maps/maps-web.min.js"></script>
-    <script type="text/javascript">
-        let center = [10.316403803312625, 44.79684014418603];
-        const map = tt.map({
-            key: "K3k0yOkyU7WALeqebCABeIkAJp9nGGmo",
-            container: "map",
-            center: center,
-            zoom: 10
-        });
-        map.on("load", ()=>{
-            new tt.Marker().setLngLat(center).addTo(map);
-        })
-    </script>
     
 </body>
 </html>

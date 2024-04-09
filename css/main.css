@@ -77,11 +77,15 @@
 }
 .menu-contacts-bg #menu-info-box {
   padding-bottom: 20px;
-  background-color: rgba(199, 199, 199, 0.541);
+  background-color: rgba(122, 116, 116, 0.712);
   border-radius: 1rem;
 }
 .menu-contacts-bg #menu-info-box ul {
   list-style: none;
+}
+.menu-contacts-bg #map {
+  width: 100%;
+  height: 400px;
 }
 
 .menu-item {
@@ -99,11 +103,6 @@
 }
 .menu-item .menu-text-box {
   margin-left: 20px;
-}
-
-#map {
-  width: 100%;
-  height: 400px;
 }
 
 body {
