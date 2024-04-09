@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/pizze.js"></script>
-    <script src="../js/dolci.js"></script>
-    <script src="../js/beverage.js"></script>
+    <script src="../js/menu.js"></script>
     <title>Menu</title>
 </head>
 <body>
@@ -131,7 +129,7 @@
                 prezzo.textContent = "Prezzo: " + dolce.prezzo + "€";
                 listItem.appendChild(prezzo);
 
-                listaPizze.appendChild(listItem);
+                listaDolci.appendChild(listItem);
             });
         }else{
             console.error("L'array non è definito");
@@ -150,7 +148,7 @@
                 prezzo.textContent = "Prezzo: " + bibita.prezzo + "€";
                 listItem.appendChild(prezzo);
 
-                listaPizze.appendChild(listItem);
+                listaBibite.appendChild(listItem);
             });
         }else{
             console.error("L'array non è definito");
