@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="use-all-space">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,14 +34,17 @@
 
 
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.0.0/maps/maps-web.min.js"></script>
-    <script>
-        tt.setProductInfo("pizzeria");
+    <script type="text/javascript">
+        let center = [10.316403803312625, 44.79684014418603];
         const map = tt.map({
             key: "K3k0yOkyU7WALeqebCABeIkAJp9nGGmo",
-            container: "map"
+            container: "map",
+            center: center,
+            zoom: 10
         });
-
-        const marker = new tt.Marker().setLngLat([44.79684014418603, 10.316403803312625]).addTo(map);
+        map.on("load", ()=>{
+            new tt.Marker().setLngLat(center).addTo(map);
+        })
     </script>
     
 </body>
