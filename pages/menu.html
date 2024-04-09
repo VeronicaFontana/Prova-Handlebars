@@ -10,7 +10,7 @@
 <body>
     
     <section class="menu-contacts-bg">
-        <div id="menu-info-box" class="container text-center">
+        <div id="menu-info-box" class="container">
             <h1 class="text-white">Il nostro menu</h1>
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
@@ -21,22 +21,8 @@
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <ul class="list-unstyled">
-                                <li>
-                                    <span><b>Patatine fritte:</b></span>
-                                    <span>Porzione piccola 3&euro; - </span>
-                                    <span>Porzione media 4&euro;</span>
-                                </li>
-                                <li>
-                                    <span><b>Nuggets di pollo:</b></span>
-                                    <span>Porzione 4 pezzi 2.50&euro; - </span>
-                                    <span>Porzione 6 pezzi 3.50&euro;</span>
-                                </li>
-                                <li>
-                                    <span><b>Alette piccanti:</b></span>
-                                    <span>Porzione 4 pezzi 3&euro; - </span>
-                                    <span>Porzione 6 pezzi 4&euro;</span>
-                                </li>
+                            <ul id="finger-list">
+
                             </ul>
                         </div>
                     </div>
@@ -89,30 +75,42 @@
 
 
 
-
-    
+<script id="finger-template" type="text/x-handlebars-template">
+    <li class="menu-item">
+        <div class="menu-text-box">
+            <p class="mb-0"><b>{{ nome }}</b></p>
+            <p>{{ quantitàPrezzo }}</p>
+        </div>
+    </li>
+</script>
     
 <script id="pizza-template" type="text/x-handlebars-template">
-    <li>
-        <img src="{{ immagine }}" alt="{{ nome }}">
-        <p>{{ nome }} - Ingredienti: {{ ingredienti }}</p>
-        <p>Prezzo: {{ prezzo }}€</p>
+    <li class="menu-item">
+        <div class="menu-img-box">
+            <img src="../img/{{immagine}}" alt="{{ nome }}">
+        </div>
+        <div class="menu-text-box">
+            <p class="mb-0"><b>{{ nome }}</b> - {{ prezzo }}€</p>
+            <p>{{ ingredienti }}</p>
+        </div>
     </li>
 </script>
 
 
 <script id="dolce-template" type="text/x-handlebars-template">
-    <li>
-        <p>{{ nome }}</p>
-        <p>Prezzo: {{ prezzo }}€</p>
+    <li class="menu-item">
+        <div class="menu-text-box">
+            <p class="mb-0"><b>{{ nome }}</b> - {{ prezzo }}€</p>
+        </div>
     </li>
 </script>
 
 
 <script id="beverage-template" type="text/x-handlebars-template">
-    <li>
-        <p>{{ nome }}</p>
-        <p>Prezzo: {{ prezzo }}€</p>
+    <li class="menu-item">
+        <div class="menu-text-box">
+            <p class="mb-0"><b>{{ nome }}</b> - {{ prezzo }}€</p>
+        </div>
     </li>
 </script>
 

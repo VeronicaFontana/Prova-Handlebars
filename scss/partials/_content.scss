@@ -37,8 +37,32 @@
         padding-bottom: 20px;
         background-color: rgba(199, 199, 199, 0.541);
         border-radius: 1rem;
+
+        ul{
+            list-style: none;
+        }
     }
 }
+
+.menu-item{
+    display: flex;
+    border-bottom: 1px solid grey;
+    margin: 10px 0;
+
+    .menu-img-box{
+        width: 100px;
+    
+        img{
+            width: 100%;
+        }
+    }
+
+    .menu-text-box{
+        margin-left: 20px;
+    }
+}
+
+
 
 
 //Contacts

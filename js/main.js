@@ -53,6 +53,27 @@ loadTemplate("footer", "#footer");
 
 //Menu
 
+const finger = [
+  {
+    nome: "Nuggets",
+    quantità: ["4 pezzi", "6 pezzi", "12 pezzi"],
+    prezzo: [3, 4, 7],
+    quantitàPrezzo: []
+  },
+  {
+    nome: "Patatine fritte",
+    quantità: ["Piccole", "Medie", "Grandi"],
+    prezzo: [2.50 , 3.50 , 4.50],
+    quantitàPrezzo: []
+  },
+  {
+    nome: "Alette piccanti",
+    quantità: ["4 pezzi", "6 pezzi"],
+    prezzo: [4, 5],
+    quantitàPrezzo: []
+  }
+]
+
 const pizze = [
   {
     nome: "Margherita",
@@ -107,24 +128,20 @@ const pizze = [
 
 const bibite = [
   {
-    nome: "Acqua naturale/frizzante - bottiglia 0.5l",
+    nome: "Acqua naturale/frizzante (bottiglia 0.5cl)",
     prezzo: "1.50",
   },
   {
-    nome: "Coca cola/coca cola zero - bottiglia 0.5l",
+    nome: "Coca cola/coca cola zero/fanta (lattina 0.33cl)",
     prezzo: "3",
   },
   {
-    nome: "Thè alla pesca/limone - bottiglia 0.5l",
+    nome: "Thè alla pesca/limone (lattina 0.33cl)",
     prezzo: "3.50",
   },
   {
-    nome: "Fanta - bottiglia 0.5l",
-    prezzo: "3",
-  },
-  {
-    nome: "Birra - 0.33",
-    prezzo: "3",
+    nome: "Birra (lattina 0.33cl)",
+    prezzo: "4",
   },
 ];
 
@@ -159,8 +176,33 @@ function prova() {
     const pizzeList = document.getElementById("pizze-list");
     const dolciList = document.getElementById("dolci-list");
     const beverageList = document.getElementById("beverage-list");
+    const fingerList = document.getElementById("finger-list");
+
+
 
     console.log(pizzeList);
+
+    if(fingerList){
+
+      finger.forEach(function (food){
+
+        if(food.quantità.length == food.prezzo.length){
+          for(i = 0; i < food.quantità.length; i++){
+            let quantità = food.quantità[i];
+            let prezzo = food.prezzo[i];
+
+            food.quantitàPrezzo.push(" " + quantità + " " + "-" + " " + prezzo + "€" + " ") 
+          }
+        }
+
+        const listItem = document.createElement("li");
+        const templateSource =
+        document.getElementById("finger-template").innerHTML;
+        const template = Handlebars.compile(templateSource);
+        const compiledHtml = template(food);
+        listItem.innerHTML = compiledHtml;
+        fingerList.appendChild(listItem);
+      });
 
     if(pizzeList){
       console.log("è entrato");
@@ -205,3 +247,4 @@ function prova() {
       });
     }
   }
+}

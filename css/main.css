@@ -81,6 +81,24 @@
   background-color: rgba(199, 199, 199, 0.541);
   border-radius: 1rem;
 }
+.menu-contacts-bg #menu-info-box ul {
+  list-style: none;
+}
+
+.menu-item {
+  display: flex;
+  border-bottom: 1px solid grey;
+  margin: 10px 0;
+}
+.menu-item .menu-img-box {
+  width: 100px;
+}
+.menu-item .menu-img-box img {
+  width: 100%;
+}
+.menu-item .menu-text-box {
+  margin-left: 20px;
+}
 
 #map {
   width: 100%;
