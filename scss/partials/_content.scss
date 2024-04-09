@@ -33,7 +33,6 @@
     padding-top: 160px;
 
     #menu-info-box{
-        max-width: 900px;
         padding-bottom: 20px;
         background-color: rgba(199, 199, 199, 0.541);
         border-radius: 1rem;
@@ -47,13 +46,15 @@
 .menu-item{
     display: flex;
     border-bottom: 1px solid grey;
-    margin: 10px 0;
+    padding: 10px 0;
 
     .menu-img-box{
         width: 100px;
+        height: 80px;
     
         img{
             width: 100%;
+            height: 100%;
         }
     }
 

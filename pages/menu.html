@@ -11,7 +11,7 @@
     
     <section class="menu-contacts-bg">
         <div id="menu-info-box" class="container">
-            <h1 class="text-white">Il nostro menu</h1>
+            <h1 class="text-white text-center">Il nostro menu</h1>
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -77,6 +77,9 @@
 
 <script id="finger-template" type="text/x-handlebars-template">
     <li class="menu-item">
+        <div class="menu-img-box">
+            <img src="../img/{{immagine}}" alt="{{ nome }}">
+        </div>
         <div class="menu-text-box">
             <p class="mb-0"><b>{{ nome }}</b></p>
             <p>{{ quantitàPrezzo }}</p>
@@ -99,6 +102,9 @@
 
 <script id="dolce-template" type="text/x-handlebars-template">
     <li class="menu-item">
+        <div class="menu-img-box">
+            <img src="../img/{{immagine}}" alt="{{ nome }}">
+        </div>
         <div class="menu-text-box">
             <p class="mb-0"><b>{{ nome }}</b> - {{ prezzo }}€</p>
         </div>

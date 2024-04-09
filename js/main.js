@@ -58,19 +58,22 @@ const finger = [
     nome: "Nuggets",
     quantità: ["4 pezzi", "6 pezzi", "12 pezzi"],
     prezzo: [3, 4, 7],
-    quantitàPrezzo: []
+    quantitàPrezzo: [],
+    immagine: "nuggets.jpg"
   },
   {
     nome: "Patatine fritte",
     quantità: ["Piccole", "Medie", "Grandi"],
     prezzo: [2.50 , 3.50 , 4.50],
-    quantitàPrezzo: []
+    quantitàPrezzo: [],
+    immagine: "patatine.jpg"
   },
   {
     nome: "Alette piccanti",
     quantità: ["4 pezzi", "6 pezzi"],
     prezzo: [4, 5],
-    quantitàPrezzo: []
+    quantitàPrezzo: [],
+    immagine: "alette.jpg"
   }
 ]
 
@@ -122,7 +125,7 @@ const pizze = [
     nome: "Piccante",
     ingredienti: ["pomodoro", "mozzarella", "salame piccante"],
     prezzo: 6,
-    immagine: "quattro-formaggi.jpg",
+    immagine: "piccante.jpg",
   },
 ];
 
@@ -149,26 +152,32 @@ const dolci = [
   {
     nome: "Tiramisu",
     prezzo: "5",
+    immagine: "tiramisu.jpg"
   },
   {
     nome: "Bignè ripieno",
     prezzo: "3",
+    immagine: "bigne.jpg"
   },
   {
     nome: "Torta della nonna",
     prezzo: "6",
+    immagine: "torta-nonna.jpg"
   },
   {
     nome: "Muffin al cioccolato",
     prezzo: "4",
+    immagine: "muffin-cioccolato.jpg"
   },
   {
     nome: "Donut allo zucchero",
     prezzo: "3",
+    immagine: "donut-zucchero.jpg"
   },
   {
     nome: "Donut al cioccolato",
     prezzo: "4",
+    immagine: "donut-cioccolato.jpg"
   },
 ];
 
